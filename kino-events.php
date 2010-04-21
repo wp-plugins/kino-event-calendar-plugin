@@ -1,11 +1,11 @@
 <?php
 /* 
- * Plugin Name:   Kino Events
+ * Plugin Name:   Kino Events Plugin
  * Version:       0.1
- * Plugin URI:    http://www.kinocreative.co.uk
+ * Plugin URI:    http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress
  * Description:   Events calendar plugin that allows external feeds to be imported via XML/RSS
  * Author:        Richard Telford
- * Author URI:    http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress
+ * Author URI:    http://www.kinocreative.co.uk/
  */
  
 include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events/ke-functions.php";
