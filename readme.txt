@@ -16,29 +16,21 @@ The admin area enables you to add, edit and remove events quickly and easily, an
 
 == Installation ==
 
-Install the plugin as you would any other Wordpress plugin by uploading the ZIP via Wordpress. Once installed you’ll see a new tab in the CMS called “Events”, underneath which are two buttons for Settings and Events.
+Install the plugin as you would any other Wordpress plugin by uploading the ZIP via Wordpress. Once installed you will see a new tab in the CMS called Events, underneath which are two buttons for Settings and Events.
 
-    * Settings - change the colours of the events and select which page you’d like a list of current and future events to be displayed.
-    * Events - Add the events to the calendar. It’s self explanatory, but make them active if you want them to show up on your website.
+- Settings - change the colours of the events and select which page you’d like a list of current and future events to be displayed.
+- Events - Add the events to the calendar. It’s self explanatory, but make them active if you want them to show up on your website.
 
 Once you have input all the event information you want then go Appearance>Widgets and move the Kino Events widget into the sidebar. Your event calendar is now live!
 
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1.png` (or jpg, jpeg, gif)
-2. This is the second screen shot
+1. screenshot-1.jpg
+2. screenshot-2.jpg
+3. screenshot-3.jpg
 
 == Changelog ==
 
 = 1.0 =
 Vanilla plugin launched
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-
