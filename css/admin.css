@@ -61,7 +61,7 @@
 	width: 36px;
 	height: 36px;
 	background-color: transparent;
-	background-image: url("/wp-content/plugins/kino-events/colorpicker/images/select.png");
+	background-image: url("/wp-content/plugins/kino-events-calendar-plugin/colorpicker/images/select.png");
 	background-repeat: repeat;
 	background-attachment: scroll;
 	background-position: 0% 0%;
@@ -75,7 +75,7 @@
 	width: 30px;
 	height: 30px;
 	background-color: transparent;
-	background-image: url("/wp-content/plugins/kino-events/colorpicker/images/select.png");
+	background-image: url("/wp-content/plugins/kino-events-calendar-plugin/colorpicker/images/select.png");
 	background-repeat: repeat;
 	background-attachment: scroll;
 	background-position: center center;

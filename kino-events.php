@@ -8,8 +8,8 @@
  * Author URI:    http://www.kinocreative.co.uk/
  */
  
-include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events/ke-functions.php";
-include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events/rss_php.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events-calendar-plugin/ke-functions.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events-calendar-plugin/rss_php.php";
 
 function ke_query($params = "")
 {
@@ -64,7 +64,7 @@ function ke_the_content($content)
 	if(get_option("ke_setting_wp_page") == $post->ID)
 	{
 		// SHOW EVENTS STUFF HERE	
-		include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events/ke-front-end.php";
+		include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events-calendar-plugin/ke-front-end.php";
 		return;
 	}
 	return $content;
@@ -233,7 +233,7 @@ if(!function_exists("ke_settings"))
 	function ke_settings()
 	{
 		global $table_prefix;
-		include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events/admin/settings.php";	
+		include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-events-calendar-plugin/admin/settings.php";	
 	}
 }
 
@@ -272,7 +272,7 @@ if(!function_exists("ke_menu"))
 	{
 		global $menu;
 		
-		$plugin_menu_icon = "/wp-content/plugins/kino-events/images/menu-single.png";
+		$plugin_menu_icon = "/wp-content/plugins/kino-events-calendar-plugin/images/menu-single.png";
 		
 		add_menu_page("Events", "Events", 8, __FILE__, "", $plugin_menu_icon);
 
@@ -295,15 +295,15 @@ if(!function_exists("ke_admin_head"))
 		?>
 		
 <!--kino-events-->
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/jquery-ui-1.7.2.custom.min.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/jquery.jfeed.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/admin.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/colorpicker/js/colorpicker.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/jquery.jfeed.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/admin.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/colorpicker/js/colorpicker.js"></script>
 
-<link rel="stylesheet" media="screen" type="text/css" href="/wp-content/plugins/kino-events/colorpicker/css/colorpicker.css" />
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-events/css/admin.css" />
-<link href="/wp-content/plugins/kino-events/css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css" rel="Stylesheet" class="ui-theme">
+<link rel="stylesheet" media="screen" type="text/css" href="/wp-content/plugins/kino-events-calendar-plugin/colorpicker/css/colorpicker.css" />
+<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-events-calendar-plugin/css/admin.css" />
+<link href="/wp-content/plugins/kino-events-calendar-plugin/css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css" rel="Stylesheet" class="ui-theme">
 <!--/kino-events-->
 <?php
 	}
@@ -327,20 +327,20 @@ if(!function_exists("ke_head"))
 		
 <!--kino-events-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/jquery-ui-1.7.2.custom.min.js"></script>
 
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/tools.tooltip-1.1.2.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/tools.tooptip.slide-1.0.0.min.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/tools.tooltip.dynamic-1.0.1.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/tools.tooltip-1.1.2.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/tools.tooptip.slide-1.0.0.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/tools.tooltip.dynamic-1.0.1.min.js"></script>
 
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/calendar.js.php"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-events/js/main.js.php<?php print $evt; ?>"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/calendar.js.php"></script>
+<script type="text/javascript" src="/wp-content/plugins/kino-events-calendar-plugin/js/main.js.php<?php print $evt; ?>"></script>
 
-<link rel='stylesheet' type='text/css' href='/wp-content/plugins/kino-events/css/calendar.css.php' />
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-events/css/main.css" />
+<link rel='stylesheet' type='text/css' href='/wp-content/plugins/kino-events-calendar-plugin/css/calendar.css.php' />
+<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-events-calendar-plugin/css/main.css" />
 
 <!--[if IE]>
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-events/css/ie.css" />
+<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-events-calendar-plugin/css/ie.css" />
 <![endif]-->
 <!--/kino-events-->
 

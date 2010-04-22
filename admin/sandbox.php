@@ -6,7 +6,7 @@
 
 #event-tooltip { 
     display:none; 
-    background:transparent url("/wp-content/plugins/kino-events/images/black_arrow.png"); 
+    background:transparent url("/wp-content/plugins/kino-events-calendar-plugin/images/black_arrow.png"); 
     font-size:12px; 
     height:70px; 
     width:160px; 

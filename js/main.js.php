@@ -20,7 +20,7 @@ j(document).ready(function()
 		events: function(start, end, callback) {
 		
 			// do some asynchronous ajax
-			j.getJSON("/wp-content/plugins/kino-events/ke-rpc.php",
+			j.getJSON("/wp-content/plugins/kino-events-calendar-plugin/ke-rpc.php",
 			{
 				action: "ke_get_events",
 				start: start.getTime(),
