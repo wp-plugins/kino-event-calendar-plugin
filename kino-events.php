@@ -277,7 +277,7 @@ if(!function_exists("ke_menu"))
 		add_menu_page("Events", "Events", 8, __FILE__, "", $plugin_menu_icon);
 
 		add_submenu_page(__FILE__, "Settings", "Settings", 8, __FILE__, "ke_settings");
-		add_submenu_page(__FILE__, "Events", "Events", 8, "kino-events-calendar-plugin/admin/events.php");
+		add_submenu_page(__FILE__, "Events", "Events", 8, "kino-event-calendar-plugin/admin/events.php");
 		//add_submenu_page(__FILE__, "Feeds", "Feeds", 8, "kino-events/admin/feeds.php");
 		//add_submenu_page(__FILE__, "Sandbox", "Sandbox", 8, "kino-events/admin/sandbox.php");
 
