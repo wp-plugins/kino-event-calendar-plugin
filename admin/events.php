@@ -182,7 +182,7 @@ $page_url = "/wp-admin/admin.php?page=kino-events/admin/events.php";
 					width: "100%",
 					height: 300,
 					
-					document_base_url : "http://www.kinodev.co.uk/wp-content/plugins/kino-events-calendar-plugin/uploads/events/"
+					document_base_url : "http://www.kinodev.co.uk/wp-content/plugins/kino-event-calendar-plugin/uploads/events/"
 
 				});
 				
@@ -218,7 +218,7 @@ $page_url = "/wp-admin/admin.php?page=kino-events/admin/events.php";
 					width: "100%",
 					height: 150,
 					
-					document_base_url : "http://www.kinodev.co.uk/wp-content/plugins/kino-events-calendar-plugin/uploads/events/"
+					document_base_url : "http://www.kinodev.co.uk/wp-content/plugins/kino-event-calendar-plugin/uploads/events/"
 
 				});
 				</script>

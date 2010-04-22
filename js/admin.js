@@ -138,7 +138,7 @@ j(document).ready(function()
 	{
 		//j('.date').datepicker({ dateFormat: 'dd/mm/yy' });
 		
-		j(".date").datepicker({dateFormat: 'dd/mm/yy', showOn: 'button', buttonImage: '/wp-content/plugins/kino-events-calendar-plugin/images/icon-datepicker.png', buttonImageOnly: true});
+		j(".date").datepicker({dateFormat: 'dd/mm/yy', showOn: 'button', buttonImage: '/wp-content/plugins/kino-event-calendar-plugin/images/icon-datepicker.png', buttonImageOnly: true});
 
 	});
 	
