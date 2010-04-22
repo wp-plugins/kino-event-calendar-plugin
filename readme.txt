@@ -10,6 +10,8 @@ The Kino Events Calendar is a simple yet flexible calendar plugin for WordPress 
 
 == Description ==
 
+This plugin is not for MU websites.
+
 Once installed the calendar will sit in the sidebar. You can also easily select an Events page which shows all current and future events in a logical order.
 
 The admin area enables you to add, edit and remove events quickly and easily, and changing colours is a breeze. The Kino Events Calendar does not use blog posts to handle events but rather lets you add events manually. This flexibility makes integrating the calendar into client sites much more feasible, and the colour changing options allow for simple branding too.
