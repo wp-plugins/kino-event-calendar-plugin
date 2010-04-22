@@ -16,12 +16,14 @@ Once installed the calendar will sit in the sidebar. You can also easily select 
 
 The admin area enables you to add, edit and remove events quickly and easily, and changing colours is a breeze. The Kino Events Calendar does not use blog posts to handle events but rather lets you add events manually. This flexibility makes integrating the calendar into client sites much more feasible, and the colour changing options allow for simple branding too.
 
+See http://www.toonfood.co.uk for a working demo
+
 == Installation ==
 
 Install the plugin as you would any other Wordpress plugin by uploading the ZIP via Wordpress. Once installed you will see a new tab in the CMS called Events, underneath which are two buttons for Settings and Events.
 
-- Settings - change the colours of the events and select which page you’d like a list of current and future events to be displayed.
-- Events - Add the events to the calendar. It’s self explanatory, but make them active if you want them to show up on your website.
+- Settings - change the colours of the events and select which page you would like a list of current and future events to be displayed.
+- Events - Add the events to the calendar. It is self explanatory, but make them active if you want them to show up on your website.
 
 Once you have input all the event information you want then go Appearance>Widgets and move the Kino Events widget into the sidebar. Your event calendar is now live!
 
@@ -36,3 +38,7 @@ Once you have input all the event information you want then go Appearance>Widget
 
 = 1.0 =
 Vanilla plugin launched
+
+= 1.1 =
+
+Sorted install problems where the plugin was looking in the wrong directory for certain files.
