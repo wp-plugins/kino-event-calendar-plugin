@@ -2,7 +2,7 @@
 var j = jQuery.noConflict();
 j(document).ready(function()
 {	
-	var plugin_url = "/wp-admin/admin.php?page=kino-events/admin/";
+	var plugin_url = "/wp-admin/admin.php?page=kino-event-calendar-plugin/admin/";
 	
 	/** FEEDS **/
 	j('.feeds-table tbody tr td:not(.option)').click(function()
