@@ -2,7 +2,7 @@
 error_reporting(E_ALL ^ E_NOTICE);
 ini_set("display_errors", "on");
 $page_identifier = "feeds";
-$page_url = "/wp-admin/admin.php?page=kino-events/admin/feeds.php";
+$page_url = "/wp-admin/admin.php?page=kino-event-calendar-plugin/admin/feeds.php";
 ?>
 <div class="wrap">
 	<h2>Feeds</h2>

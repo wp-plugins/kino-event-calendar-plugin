@@ -2,7 +2,7 @@
 error_reporting(E_ALL ^ E_NOTICE);
 ini_set("display_errors", "on");
 $page_identifier = "settings";
-$page_url = "/wp-admin/admin.php?page=kino-events/kino-events.php";
+$page_url = "/wp-admin/admin.php?page=kino-event-calendar-plugin/kino-events.php";
 ?>
 <div class="wrap">
 	<h2>Settings</h2>
