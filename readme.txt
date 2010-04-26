@@ -42,3 +42,7 @@ Vanilla plugin launched
 = 1.1 =
 
 Sorted install problems where the plugin was looking in the wrong directory for certain files.
+
+= 1.2 =
+
+Fixed path problem when making changes to Events or Settings.
