@@ -4,7 +4,7 @@ Donate link: http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calenda
 Tags: calendar, events
 Requires at least: 2.0.2
 Tested up to: 2.9.2
-Stable tag: 1.4
+Stable tag: 1.4.1
 
 The Kino Events Calendar is a simple yet flexible calendar plugin for WordPress enabling you to easily add event information manually.
 
