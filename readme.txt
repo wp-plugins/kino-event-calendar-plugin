@@ -1,10 +1,10 @@
 === Kino Events Calendar ===
-Contributors: Richard Telford, Simon Paul, Seth Ridley
+Contributors: Richard Telford, Brad Brighton, Simon Paul, Seth Ridley
 Donate link: http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/
 Tags: calendar, events
 Requires at least: 2.0.2
 Tested up to: 2.9.2
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 
 The Kino Events Calendar is a simple yet flexible calendar plugin for WordPress enabling you to easily add event information manually.
 
