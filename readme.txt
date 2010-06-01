@@ -46,3 +46,15 @@ Sorted install problems where the plugin was looking in the wrong directory for 
 = 1.2 =
 
 Fixed path problem when making changes to Events or Settings.
+
+= 1.3 =
+
+Significant changes to internal path handling. (BMB)
+1. Added ke-location.php
+2. js/admin.js is now js/admin.js.php
+3. Modified many files to utilize ke-location. 
+
+Benefits:
+
+1. Plugin can now be used in WP installs other than DOCUMENT_ROOT
+2. Plugin directory can now vary in name without breakage (does NOT yet incorporate any form of multi-install setting protection)

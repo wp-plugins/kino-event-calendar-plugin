@@ -1,15 +1,53 @@
 <?php
 /* 
  * Plugin Name:   Kino Events Calendar Plugin
- * Version:       0.1
+ * Version:       1.4
  * Plugin URI:    http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress
  * Description:   Events calendar plugin that allows external feeds to be imported via XML/RSS
  * Author:        Richard Telford
  * Author URI:    http://www.kinocreative.co.uk/
  */
- 
-include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-event-calendar-plugin/ke-functions.php";
-include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-event-calendar-plugin/rss_php.php";
+
+/*************************************************************************************************/
+/*
+ * Location independence code and modifications:
+ * Brad Brighton (photos@sentientfood.com http://www.sentientfood.com)
+ * Additions AS IS with no warranty
+ * 
+ *
+ * To any coders/maintainers:
+ * 
+ * Put this code at the top of each PHP file that needs to know paths to other resources.
+ * Modify the path to ke-location.php to be relative to the plugin tree structure. For example:
+ *		"/../ke-location.php"
+ *		"/../../ke-location.php"
+ *		etc.
+ * 
+ * See <plugin_directory>/ke-location.php comments for docs of the expected return values for 
+ * the variables.
+ *
+ */
+include_once dirname(__FILE__)."/ke-location.php";
+
+// It's a good idea that if ke-location.php is extended, make explicit global variables 
+// for these. Don't rely on variables automatically being global as they won't be when you
+// least expect it, leading to INCREDIBLY difficult-to-find errors.
+global $pluginLocation, $pluginRelativeLocation, $pluginDirname, $wpBaseLocation, $theBaseURL, $myURL, $theAdminURL;
+
+$pluginLocation = ke_getPluginLocation();
+$pluginRelativeLocation = ke_getPluginRelativeLocation();
+$wpBaseLocation = ke_getInstallBaseLocation();
+$pluginDirname = ke_getPluginDirname();
+$theBaseURL = ke_getWPURL();
+$myURL = ke_getMyURLDir();
+$theAdminURL = ke_getAdminURL();
+/*************************************************************************************************/
+
+// If there's a concern about some value being returned incorrectly, uncomment the following line to get a visual reference to the returned values for troubleshooting.
+//echo ("pl:>".$pluginLocation."<:prl:>".$pluginRelativeLocation."<:wpbase:>".$wpBaseLocation."<:dirname:>".$pluginDirname."<:urlbase:>".$theBaseURL."<:my:>".$myURL."<:admin:>".$theAdminURL."<::");
+
+include_once $pluginLocation."/ke-functions.php";	// bmb
+include_once $pluginLocation."/rss_php.php";		// bmb
 
 function ke_query($params = "")
 {
@@ -64,7 +102,8 @@ function ke_the_content($content)
 	if(get_option("ke_setting_wp_page") == $post->ID)
 	{
 		// SHOW EVENTS STUFF HERE	
-		include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-event-calendar-plugin/ke-front-end.php";
+		global $pluginLocation;		// BMB This could be combined above, but segregated for clarity
+		include_once $pluginLocation."/ke-front-end.php";
 		return;
 	}
 	return $content;
@@ -233,7 +272,8 @@ if(!function_exists("ke_settings"))
 	function ke_settings()
 	{
 		global $table_prefix;
-		include_once $_SERVER['DOCUMENT_ROOT']."/wp-content/plugins/kino-event-calendar-plugin/admin/settings.php";	
+		global $pluginLocation;		// bmb
+		include_once $pluginLocation."/admin/settings.php";	
 	}
 }
 
@@ -272,14 +312,15 @@ if(!function_exists("ke_menu"))
 	{
 		global $menu;
 		
-		$plugin_menu_icon = "/wp-content/plugins/kino-event-calendar-plugin/images/menu-single.png";
+		global $pluginRelativeLocation, $pluginDirname; // bmb
+		$plugin_menu_icon = $pluginRelativeLocation."/images/menu-single.png";
 		
 		add_menu_page("Events", "Events", 8, __FILE__, "", $plugin_menu_icon);
 
 		add_submenu_page(__FILE__, "Settings", "Settings", 8, __FILE__, "ke_settings");
-		add_submenu_page(__FILE__, "Events", "Events", 8, "kino-event-calendar-plugin/admin/events.php");
-		//add_submenu_page(__FILE__, "Feeds", "Feeds", 8, "kino-event-calendar-plugin/admin/feeds.php");
-		//add_submenu_page(__FILE__, "Sandbox", "Sandbox", 8, "kino-event-calendar-plugin/admin/sandbox.php");
+		add_submenu_page(__FILE__, "Events", "Events", 8, $pluginDirname."/admin/events.php");
+		//add_submenu_page(__FILE__, "Feeds", "Feeds", 8, $pluginDirname."/admin/feeds.php");
+		//add_submenu_page(__FILE__, "Sandbox", "Sandbox", 8, $pluginDirname."/admin/sandbox.php");
 
 	}
 }
@@ -292,18 +333,21 @@ if(!function_exists("ke_admin_head"))
 {
 	function ke_admin_head()
 	{
+		// The sections below were modified to directly incorporate the derived path information.
+		// As noted in ke-location.php, these should really be handled through settings or other 
+		// actual WP calls rather than self-derived, to better handle custom installations. --bmb
 		?>
 		
 <!--kino-events-->
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/jquery-ui-1.7.2.custom.min.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/jquery.jfeed.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/admin.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/colorpicker/js/colorpicker.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/jquery.jfeed.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/admin.js.php"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/colorpicker/js/colorpicker.js"></script>
 
-<link rel="stylesheet" media="screen" type="text/css" href="/wp-content/plugins/kino-event-calendar-plugin/colorpicker/css/colorpicker.css" />
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-event-calendar-plugin/css/admin.css" />
-<link href="/wp-content/plugins/kino-event-calendar-plugin/css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css" rel="Stylesheet" class="ui-theme">
+<link rel="stylesheet" media="screen" type="text/css" href="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/colorpicker/css/colorpicker.css" />
+<link rel="stylesheet" type="text/css" href="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/css/admin.css" />
+<link href="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css" rel="Stylesheet" class="ui-theme">
 <!--/kino-events-->
 <?php
 	}
@@ -323,24 +367,26 @@ if(!function_exists("ke_head"))
 		{
 			$evt = "?evt=".stripslashes($_GET['evt']);
 		}
+		
+		// bmb
 		?>
 		
 <!--kino-events-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/jquery-ui-1.7.2.custom.min.js"></script>
 
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/tools.tooltip-1.1.2.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/tools.tooptip.slide-1.0.0.min.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/tools.tooltip.dynamic-1.0.1.min.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/tools.tooltip-1.1.2.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/tools.tooptip.slide-1.0.0.min.js"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/tools.tooltip.dynamic-1.0.1.min.js"></script>
 
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/calendar.js.php"></script>
-<script type="text/javascript" src="/wp-content/plugins/kino-event-calendar-plugin/js/main.js.php<?php print $evt; ?>"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/calendar.js.php"></script>
+<script type="text/javascript" src="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/js/main.js.php<?php print $evt; ?>"></script>
 
-<link rel='stylesheet' type='text/css' href='/wp-content/plugins/kino-event-calendar-plugin/css/calendar.css.php' />
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-event-calendar-plugin/css/main.css" />
+<link rel='stylesheet' type='text/css' href='<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/css/calendar.css.php' />
+<link rel="stylesheet" type="text/css" href="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/css/main.css" />
 
 <!--[if IE]>
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/kino-event-calendar-plugin/css/ie.css" />
+<link rel="stylesheet" type="text/css" href="<?php global $pluginRelativeLocation; echo $pluginRelativeLocation; ?>/css/ie.css" />
 <![endif]-->
 <!--/kino-events-->
 
