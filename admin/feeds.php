@@ -1,8 +1,36 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 ini_set("display_errors", "on");
+/*************************************************************************************************/
+/*
+ * To any coders/maintainers:
+ * 
+ * Put this code at the top of each PHP file that needs to know paths to other resources.
+ * Modify the path to ke-location.php to be relative to the plugin tree structure. For example:
+ *		"/../ke-location.php"
+ *		"/../../ke-location.php"
+ *		etc.
+ * 
+ * See <plugin_directory>/ke-location.php comments for docs of the expected return values for 
+ * the variables.
+ *
+ */
+include_once dirname(__FILE__)."/../ke-location.php";
+
+// It's a good idea that if ke-location.php is extended, make explicit global variables 
+// for these. Don't rely on variables automatically being global as they won't be when you
+// least expect it, leading to INCREDIBLY difficult-to-find errors.
+global $pluginLocation, $pluginRelativeLocation, $pluginDirname, $wpBaseLocation, $theBaseURL, $myURL;
+
+$pluginLocation = ke_getPluginLocation();
+$pluginRelativeLocation = ke_getPluginRelativeLocation();
+$wpBaseLocation = ke_getInstallBaseLocation();
+$pluginDirname = ke_getPluginDirname();
+$theBaseURL = ke_getWPURL();
+$myURL = ke_getMyURLDir();
+/*************************************************************************************************/
 $page_identifier = "feeds";
-$page_url = "/wp-admin/admin.php?page=kino-event-calendar-plugin/admin/feeds.php";
+$page_url = $theBaseURL."/wp-admin/admin.php?page=".$pluginDirname."/admin/feeds.php";
 ?>
 <div class="wrap">
 	<h2>Feeds</h2>

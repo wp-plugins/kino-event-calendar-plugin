@@ -10,7 +10,7 @@
 #event-tooltip
 { 
     display:none; 
-    background-image: url("/wp-content/plugins/kino-event-calendar-plugin/images/tooltip-bg.png");
+    background-image: url("../images/tooltip-bg.png"); /* bmb -- made a relative URL */
 	background-repeat:repeat-x;
     font-size:12px; 
     height:auto; 
