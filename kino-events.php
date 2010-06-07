@@ -436,6 +436,11 @@ function ke_widget($args)
 	$ke_settings = db_get_rows($query);
 	$event_url = get_permalink($ke_settings[0]['setting_wp_page']);
 	?>
+    
+    <!-- If you make use of this plugin then please show your appreciation of our hard work by leaving the following link in place. Thank you for your support. -->
+	<!-- If you choose to remove the link, consider making a donation at http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/ -->
+	<p class="kino-link"><a href="http://www.kinocreative.co.uk" style="font-size: 9px; color: #AAA">Events Calendar by Kino Creative</a></p>
+    
 	<p><a class="more-link" href="<?php print get_permalink(get_option("ke_setting_wp_page"));?>">See all events</a></p>
 	<?php
 	//echo $after_widget;
