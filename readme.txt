@@ -2,30 +2,45 @@
 Contributors: Richard Telford, Brad Brighton, Simon Paul, Seth Ridley
 Donate link: http://www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/
 Tags: calendar, events
-Requires at least: 2.0.2
-Tested up to: 2.9.2
+Requires at least: 3.0
+Tested up to: 3.0
 Stable tag: 1.4.3
 
-The Kino Events Calendar is a simple yet flexible calendar plugin for WordPress enabling you to easily add event information manually.
+*********************************************************
+*********************************************************
+This event calendar ONLY WORKS ON WORDPRESS 3.0 and above. 
+
+For an earlier version of the calendar please visit www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/
+*********************************************************
+*********************************************************
+
+The Kino Events Calendar is a simple yet flexible calendar plugin for WordPress enabling you to easily add event information manually. 
+
 
 == Description ==
 
 
-Once installed the calendar will sit in the sidebar. You can also easily select an Events page which shows all current and future events in a logical order.
+Once installed the calendar must be dragged into the side bar from Appearance > Widgets. The calendar will then show in the sidebar of every page.
+
+You can easily select an Events page which shows all current and future events by entering the smartcode [events] into whatever page you like.
 
 The admin area enables you to add, edit and remove events quickly and easily, and changing colours is a breeze. The Kino Events Calendar does not use blog posts to handle events but rather lets you add events manually. This flexibility makes integrating the calendar into client sites much more feasible, and the colour changing options allow for simple branding too.
 
-See http://www.toonfood.co.uk for a working demo
+See http://www.8bitbard.co.uk for a working demo.
 
 
 == Installation ==
 
-Install the plugin as you would any other Wordpress plugin by uploading the ZIP via Wordpress. Once installed you will see a new tab in the CMS called Events, underneath which are two buttons for Settings and Events.
+Install the plugin as you would any other Wordpress plugin by uploading the ZIP via Wordpress or installing from the plugin console. Once installed you will see a new area in the CMS called Events and another called Event Calendar under Settings.
 
-- Settings - change the colours of the events and select which page you would like a list of current and future events to be displayed.
-- Events - Add the events to the calendar. It is self explanatory, but make them active if you want them to show up on your website.
+If you have an existing Kino Events Calendar plugin then either upgrade via the WP plugin console, or delete the existing install (and the entire file structure in wp-plugins) and reinstall the new plugin.
 
-Once you have input all the event information you want then go Appearance>Widgets and move the Kino Events widget into the sidebar. Your event calendar is now live!
+- Settings> Event Calendar: Change the colours of the events and category colours here. Also change date and time format.
+
+
+- Events> Events: Lists all the events you've added.
+- Events> Add New: Add new events.
+- Events> Cartegories: Add categories with to organise events under.
 
 
 == Screenshots ==
@@ -58,3 +73,23 @@ Benefits:
 
 1. Plugin can now be used in WP installs other than DOCUMENT_ROOT
 2. Plugin directory can now vary in name without breakage (does NOT yet incorporate any form of multi-install setting protection)
+
+= 2.0 = 
+Major updates! This is a complete rewrite of the existing plugin to take advantage of the new WP3 functionality, specifically custom post types. The following are the key updates:
+
+1. Added option to "Add End Date".
+2. Added Fully featured TinyMCE Editor to allow links, and wide rnaging copy editing.
+3. Search Engine Freindly URLs (SEF) on all event pages.
+4. Added option to choose a thumbnail for a post using the Featured Post utility.
+5. Events can now be set to be recurring.
+6. Events can now be set to be "All Day Events".
+7. Events can be placed into categories and given individual category slug and descriptions.
+8. You can now pick a master colour and rollover colour for events, and individual colours for categorised events.
+9. Events can be given 'intro text' using the Excerpt functionality.
+10. Place the main Events page which lists all future events wherever you want in your site using the shortcode [events].
+11. Events now use custom post types and are much easier work with.
+
+
+
+
+
