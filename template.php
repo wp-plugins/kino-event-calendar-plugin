@@ -1,7 +1,7 @@
 <?php
 $today = date("Y-m-d");
 
-$events = get_posts("post_type=events");
+$events = get_posts("post_type=events&numberposts=-1");
 
 if(count($events))
 {

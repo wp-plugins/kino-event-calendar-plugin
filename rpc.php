@@ -9,7 +9,7 @@ switch($action)
 	case "get_events":
 	
 		// EVENTS WILL NOW BE PULLED FROM CUSTOM POSTS .. THANK FUCK!
-		$events = get_posts("post_type=events");
+		$events = get_posts("post_type=events&numberposts=-1");
 		
 		$cal_events = array();
 		
