@@ -8,7 +8,7 @@ Stable tag: 1.4.3
 
 == Description ==
 
-This event calendar ONLY WORKS ON WORDPRESS 3.0 and above. 
+This event calendar ONLY WORKS ON WORDPRESS 3.0 and above, and not on MU sites (yet - we're working on it though).
 
 For an earlier version of the calendar please visit http://plugins.svn.wordpress.org/kino-event-calendar-plugin/tag/v1.4/kino-event-calendar-plugin.zip
 
