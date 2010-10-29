@@ -10,7 +10,7 @@ Stable tag: 1.4.3
 
 This event calendar ONLY WORKS ON WORDPRESS 3.0 and above. 
 
-For an earlier version of the calendar please visit www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/
+For an earlier version of the calendar please visit http://plugins.svn.wordpress.org/kino-event-calendar-plugin/tag/v1.4/kino-event-calendar-plugin.zip
 
 
 Once installed the calendar must be dragged into the side bar from Appearance > Widgets. The calendar will then show in the sidebar of every page.
