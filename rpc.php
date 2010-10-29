@@ -1,7 +1,12 @@
 <?php
 extract($_POST);error_reporting(E_ALL ^ E_NOTICE);
 ini_set("display_errors", "on");
-require_once $_SERVER['DOCUMENT_ROOT']."/wp-load.php";
+
+// NEED THE WORDPRESS ROOT HERE
+
+$root = dirname(dirname(dirname(getcwd())));
+require_once $root."/wp-load.php";
+
 extract($_GET);
 extract($_POST);
 switch($action)
