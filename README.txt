@@ -21,6 +21,20 @@ The admin area enables you to add, edit and remove events quickly and easily, an
 
 See http://www.8bitbard.co.uk for a working demo.
 
+The main updates are as follows:
+
+1. Added option to "Add End Date".
+2. Added Fully featured TinyMCE Editor to allow links, and wide ranging copy editing.
+3. Search Engine Friendly URLs (SEF) on all event pages.
+4. Added option to choose a thumbnail for a post using the Featured Post utility.
+5. Events can now be set to be recurring.
+6. Events can now be set to be "All Day Events".
+7. Events can be placed into categories and given individual category slug and descriptions.
+8. You can now pick a master colour and rollover colour for events, and individual colours for categorised events.
+9. Events can be given 'intro text' using the Excerpt functionality.
+10. Place the main Events page which lists all future events wherever you want in your site using the shortcode [events].
+11. Events now use custom post types and are much easier work with.
+
 
 == Installation ==
 
