@@ -6,23 +6,12 @@ Requires at least: 3.0
 Tested up to: 3.0
 Stable tag: 1.4.3
 
-This event calendar ONLY WORKS ON WORDPRESS 3.0 and above. 
-
-For an earlier version of the calendar please visit www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/
-*********************************************************
-*********************************************************
-
-The Kino Events Calendar is a simple yet flexible calendar plugin for WordPress enabling you to easily add event information manually. 
-
-
 == Description ==
-*********************************************************
-*********************************************************
+
 This event calendar ONLY WORKS ON WORDPRESS 3.0 and above. 
 
 For an earlier version of the calendar please visit www.kinocreative.co.uk/wordpress-plugins/kino-events-calendar-plugin-for-wordpress/
-*********************************************************
-*********************************************************
+
 
 Once installed the calendar must be dragged into the side bar from Appearance > Widgets. The calendar will then show in the sidebar of every page.
 
