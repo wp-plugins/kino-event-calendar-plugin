@@ -37,15 +37,23 @@ The main updates are as follows:
 
 
 == Installation ==
-
+NEW INSTALL:
 Install the plugin as you would any other Wordpress plugin by uploading the ZIP via Wordpress or installing from the plugin console. Once installed you will see a new area in the CMS called Events and another called Event Calendar under Settings.
-
-If you have an existing Kino Events Calendar plugin then either upgrade via the WP plugin console, or delete the existing install (and the entire file structure in wp-plugins) and reinstall the new plugin.
 
 - Settings> Event Calendar: Change the colours of the events and category colours here. Also change date and time format.
 - Events> Events: Lists all the events you've added.
 - Events> Add New: Add new events.
 - Events> Cartegories: Add categories with to organise events under.
+
+
+UPGRADING
+If you have an existing Kino Events Calendar plugin then we would suggest you follow these instructions to ensure an easy upgrade:
+
+1) Deactivate the existing plugin.
+2) Delete the existing kino-event-calendar-plugin, preferably using FTP.
+3) Install the latest plugin via Wordpress.
+
+
 
 
 == Screenshots ==
