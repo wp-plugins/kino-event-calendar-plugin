@@ -104,7 +104,7 @@ class KinoEvents extends WP_Widget {
 		
 		print $before_widget;
 		print $before_title.$title.$after_title;
-		print "<div id='ke-calendar'></div><p class='kccredit'>Developed by <a href='http://www.kinocreative.co.uk'>Kino Creative</a>";
+		print "<div id='ke-calendar'></div><p class='kccredit'><a href='http://www.kinocreative.co.uk'>Design by Kino Creative</a>";
 		print $after_widget;
 		
 	}
