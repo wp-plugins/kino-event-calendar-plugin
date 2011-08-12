@@ -60,7 +60,7 @@ If you have an existing Kino Events Calendar plugin then we would suggest you fo
 
 = Where do I go for help? =
 
-The plugin is released for free and is not officially supported. However, you can use the support forums on the Kino Creative website [Kino Creative Forums](http://www.support.kinocreative.co.uk/ "Kino Creative Forums") to get help from ourselves and other users.
+The plugin is released for free and is not officially supported. However, you can use the support forums on the Kino Creative website [Kino Creative Forums](http://support.kinocreative.co.uk/ "Kino Creative Forums") to get help from ourselves and other users.
 
 = Is there a demo? =
 
